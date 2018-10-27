@@ -1,0 +1,19 @@
+\begingroup
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+\coordinate [below=10.8cm] (midpoint) at (current page.north);
+\node at (current page.north west)
+{\begin{tikzpicture}[remember picture,overlay]
+M\node[anchor=north west,inner sep=0pt] at (0,0) 
+{\includegraphics[width=\paperwidth]{TitleFinal-min}}; % Background image
+\draw[anchor=north] (midpoint) node [fill=ocre!30!white,fill opacity=0.6,text 
+opacity=1,inner 
+sep=2.15cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{
+\centering \#9774 Nano Ninjas 
+Engineering Notebook\\[15pt] % Book title
+{\huge Our Journey Through FTC: 2015-16 Res-Q Season}\\[20pt] % Subtitle
+{\LARGE Portland, OR}}}; 
+\end{tikzpicture}};
+\end{tikzpicture}
+\vfill
+\endgroup

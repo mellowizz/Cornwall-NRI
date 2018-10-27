@@ -19,9 +19,24 @@
 %	VARIOUS REQUIRED PACKAGES AND CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\usepackage[top=3cm,bottom=3cm,left=3cm,right=3cm,headsep=10pt,a4paper]{geometry} % Page margins
+% My additions: 
+\usepackage{graphicx, verbatim, gensymb, appendix, lmodern}
+\usepackage{pdfpages}
+\usepackage[acronym, toc]{glossaries}
+\usepackage[nottoc]{tocbibind}
+\usepackage{wrapfig}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{textcomp}
+\usepackage[bottom]{footmisc}
+\usepackage[plain]{fancyref}
+\usepackage{siunitx}
+%\usepackage[top=3cm,bottom=3cm,left=3cm,right=3cm,headsep=10pt,letter]
+% {geometry}
+\usepackage{geometry}
+\geometry{letterpaper}
+%%%%
 
-\usepackage{graphicx} % Required for including pictures
 \graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
 
 \usepackage{lipsum} % Inserts dummy text
@@ -38,7 +53,7 @@
 \usepackage{xcolor} % Required for specifying colors by name
 \definecolor{ocre}{RGB}{243,102,25} % Define the orange color used for highlighting throughout the book
 
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 %	FONTS
 %----------------------------------------------------------------------------------------
 

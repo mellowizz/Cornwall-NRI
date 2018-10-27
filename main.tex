@@ -1,4 +1,3 @@
-
 % The Legrand Orange Book
 % LaTeX Template
 % Version 2.1 (14/11/15)
@@ -48,65 +47,26 @@
 \usepackage{wrapfig}
 \usepackage{color}
 \newcommand{\hilight}[1]{\colorbox{yellow}{#1}}
-\usepackage[section]{placeins}
+\usepackage[chapter]{placeins}
 
-\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+\input{structure} % Insert the commands.tex file which contains the majority of 
+%the structure behind the template
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 %	TITLE PAGE
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%\input{titlepage}
 
-\begingroup
-\thispagestyle{empty}
-\begin{tikzpicture}[remember picture,overlay]
-\coordinate [below=10.8cm] (midpoint) at (current page.north);
-\node at (current page.north west)
-{\begin{tikzpicture}[remember picture,overlay]
-M\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{TitleFinal-min}}; % Background image
-\draw[anchor=north] (midpoint) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=2.15cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering \#9774 Nano Ninjas 
-Engineering Notebook\\[15pt] % Book title
-{\huge Our Journey Through FTC: 2015-16 Res-Q Season}\\[20pt] % Subtitle
-{\LARGE Portland, OR}}}; 
-\end{tikzpicture}};
-\end{tikzpicture}
-\vfill
-\endgroup
-%----------------------------------------------------------------------------------------
-%	COPYRIGHT PAGE
-%----------------------------------------------------------------------------------------
-
-\newpage
-~\vfill
-\thispagestyle{empty}
-\includegraphics[width=3in]{Pictures/logo.png}
-\large Thanks to Overleaf for providing us with the platform to create this document.  The Legrand Orange Book LaTeX Template is downloaded from  http://www.LaTeXTemplates.com. Thank you to  Mathias Legrand.  
-
-
-\noindent Copyright \copyright\ 2015-16 Nano Ninjas\\ % Copyright notice
-
-\noindent \textsc{Published by Nano Ninjas}\\ % Publisher
-
-\noindent \textsc{https://www.facebook.com/NanoNinjas/}\\ % URL
-
-\noindent Licensed under the Creative Commons Attribution-NonCommercial 3.0 Unported License (the ``License''). You may not use this file except in compliance with the License. You may obtain a copy of the License at \url{http://creativecommons.org/licenses/by-nc/3.0}. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \textsc{``as is'' basis, without warranties or conditions of any kind}, either express or implied. See the License for the specific language governing permissions and limitations under the License.\\ % License information
-
-\noindent \textit{First printing, December 2015} % Printing/edition date
-
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 %	THANK YOU PAGE
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%\input{thankyou}
 
-\newpage
-~\vfill
-\thispagestyle{empty}
-\Huge  Thanks to Our Sponsors\\  
-\large
-
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 %	TABLE OF CONTENTS
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \chapterimage{IMG_0646__1_.jpg} % Table of contents heading image
 
@@ -114,134 +74,159 @@ Engineering Notebook\\[15pt] % Book title
 
 \tableofcontents % Print the table of contents itself
 
-\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+\cleardoublepage % Forces the first chapter to start on an odd page so it's on 
 
 \pagestyle{fancy} % Print headers again
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 %	PART
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
-\part{}
+\part{Acknowledgements and Front Matters}
 
-%----------------------------------------------------------------------------------------
-%	CHAPTER 1
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
-\chapterimage{Chapter_Images/nn_logo.jpg} % Chapter heading image
-
-%\chapter{Season Highlights: The Nano Ninjas}
-
-
-%----------------------------------------------------------------------------------------
 %	PART
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
-%\part{Meet The Ninjas}
-
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 %	CHAPTER 1
-%----------------------------------------------------------------------------------------
-
-\chapterimage{Chapter_Images/IMG_0650.JPG} % Chapter heading image
-
-\chapter{Acknowledgements \& Contributors}
-
-%------------------------------------------------
-
-\chapter{List of Maps}
+%-------------------------------------------------------------------------------
 
 
-\chapter{Executive Summary}
+\linespread{1.15} %Set standard document linespacing
+
+%***************Acknowledgements*****************
+\chapter{Acknowledgements \& Contributors}\label{sec:acknowledgements}
+\input{cornwall_tex/acknowledgements}
+
+\pagebreak
+
+\tableofcontents
+
+%*************** List of Maps *******************
+\pagebreak
+\chapter{List of Maps}\label{sec:listofmaps}
+\input{cornwall_tex/listofmaps}
+
+\pagebreak
+
+%*************** Executive Summary ***************
+\input{cornwall_tex/executive}\label{sec:executivesummary}
+
+%************** Introduction *********************
+\chapter{Introduction}\label{sec:intro}
+\input{cornwall_tex/intro}
+
+\pagebreak
+
+\part{Cornwall's Resources}
+
+%***************Basemap**************************
+\chapter{Basemap and Aerial Imagery}\label{sec:basemap}
+\input{cornwall_tex/basemap}
+
+%*****Historic and Cultural Resources************
+\chapter{Historic and Cultural Resources}\label{sec:historic}
+\input{cornwall_tex/historic}
+
+%***************Habitats & Wildlife**************
+\chapter{Habitats and Wildlife}\label{sec:habitats}
+\input{cornwall_tex/habitats}
+
+%***************Water Resources******************
+\chapter{Water Resources}\label{sec:water}
+\input{cornwall_tex/water}
+
+%***************Geology & Soils******************
+\chapter{Geology and Soils}\label{sec:geology}
+\input{cornwall_tex/geology}
+
+\part{Cornwall's Future?}
+%***************Climate Change******************
+\chapter{Climate Conditions and Projections}\label{sec:climate}
+\input{cornwall_tex/climate}
+
+%*******Proposed Fossil Fuel Infrastructure*****
+\chapter{Proposed Fossil Fuel Infrastructure}\label{sec:fossil}
+\input{cornwall_tex/fossil}
+
+\part{Cornwall's Power of Homerule}
+%*********************LULC**********************
+\chapter{Land Use}\label{sec:landuse}
+\input{cornwall_tex/landuse}
+
+%\subchapter{Figures}
+%There will be some figures here maybe.
+
+\part{References, Appendices \& Glossary}
+%**************References**********************
+\chapter{References \& Resources}\label{sec:references}
+\printbibliography
+
+%Appendix%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\chapter{Appendices}\label{sec:appendices}
+%\addcontentsline{toc}{chapter}{Appendices}
+%\renewcommand{\thesubchapter}{\Alph{subchapter}}
+
+%Glossary%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Glossary and Acronyms}\label{subsec:glossary}
+\glsaddall
+\renewcommand{\glossarychapter}[2][]{}
+\printglossary
+
+%\addtocounter{subchapter}{1}
+\chapter{Known Species of Conservation Concern in the Town of Cornwall 
+and Village of Cornwall-on-Hudson, NY}
+\includepdf[pages=-]{appendix/cornwall_B.pdf}
+\namedlabel{app:cornwall_species}{Known Species of Conservation Concern in the 
+Town of Cornwall and Village of Cornwall-on-Hudson, NY}
+
+%\addtocounter{subchapter}{1}
+%\addcontentsline{toc}{subchapter}{\Alph{subchapter} \hspace{4mm}
+\chapter{Summary of Municipal Wetland and Watercourse Protection Techniques}
+\includepdf[pages=-]{appendix/cornwall_C.pdf}\label{app:wetland_protection}
+
+\chapter{National Wetland Inventory Wetland Classes}
+\input{appendix/cornwall_D}\label{app:cornwall_wetlands}
+
+\chapter{Additional Information on Climate Conditions and Projections}
+\includepdf[pages=-]{appendix/cornwall_E.pdf}\label{app:climate_projection}
+
+\chapter{Natural Resources within Zoning Districts and Overlays for the Town 
+of Cornwall and the Village of Cornwall-on-Hudson}
+\input{appendix/cornwall_F}\label{app:zoning}
+
+%\addtocounter{subchapter}{1}
+%\addcontentsline{toc}{subchapter}{\Alph{subchapter} \hspace{4mm}
+\chapter{Orange County Municipality Resiliency Code Audit}
+\includepdf[pages=-]{appendix/cornwall_G.pdf}\label{app:oc_resiliency}
+
+%\addtocounter{subchapter}{1}
+%\addcontentsline{toc}{subchapter}{\Alph{subchapter} \hspace{4mm}
+\chapter{Water Quality \& Quantity Protection from Pace Law School Land Use Law 
+Center}
+\includepdf[pages=-]{appendix/cornwall_H.pdf}\label{app:water_quality}
 
 
-\chapter{Introduction}
+%\addtocounter{subchapter}{1}
+%\addcontentsline{toc}{subchapter}{\Alph{subchapter} \hspace{4mm}
+\chapter{Preservation of Natural Features from Pace Law School Land Use Law 
+Center}
+\includepdf[pages=-]{appendix/cornwall_I.pdf}\label{app:pres_natfeatures}
 
-\noindent But their journey is not complete without its bumps in the road. During their second year in FLL, a gyro sensor breakdown held them back from continuing on to State Championships. Even after the season was over, they still did not give up, and instead worked harder to learn from their mistakes and ensure that they would not face any more problems of the kind.\\
+%\addtocounter{subchapter}{1}
+%\addcontentsline{toc}{subchapter}{\Alph{subchapter} \hspace{4mm}
+\chapter{Compact Development \& Infill from Pace Law School Land Use Law 
+Center} 
+\includepdf[pages=-]{appendix/cornwall_J.pdf}\label{app:compact_development}
 
-\part{Historic and Cultural Resources}
+\noindent Some text here that is not indented...
 
-\noindent As a rookie FTC team they are still adjusting to the different technology but are enjoying the new experience all the same! Even though they have ran into many issues with the new technology, such as pairing issues and unplanned restarts, they have managed to debug the problems so they do not happen in the future. The ninjas are excited about this year’s challenge, FIRST Res-Q, and also discovering more about the new Android platform. \\
+%-------------------------------------------------------------------------------
 
-\noindent Their highly-capable coach and parent mentors come from all divergent occupations in obverses of engineering, business, manufacturing from companies such as Intel, Aplos, and Nike. Their lead mentor is high schooler Anna Nixon, a participant of FIRST since second grade. She is currently in her second year of high school and has gone through the entire journey of JFLL, FLL, FTC, and now FRC. They are honored to have her as a mentor as she has the most information and experience about FIRST robotics than any of the team members.\\
-\part{Habitats and Wildlife}
-
-\chapter{Areas of Known Importance}
-
-\noindent The Ninjas then took a leap from FLL to FTC. Gradually, their FIRST team grew until it became an FTC team of fifteen intelligent, assiduous girls from all backgrounds and schools. And in these past few months, from even before the beginning of the season and Kickoff, their team has continued to grow closer and more united as one.\\
-
-
-\chapter{Terrestrial Habitats}
-
-\chapter{Forests}
-
-\chapter{Stream and Riparian Habitat}
-\noindent Now, as an FTC team, they are represented through STEM4Girls, a nonprofit organization which inspires young girls to partake in STEM. Only in its first year, STEM4Girls already has two other FLL teams and has put up an after-school coding class in the largest local middle school, Stoller Middle School. They are proud to be run through a program of such determined people whom hold the same vision as them of a world run by young girls in STEM.\\
-
-
-\part{Engineering Summaries: Pre-Season}
-
-%----------------------------------------------------------------------------------------
-%	CHAPTER 3
-%----------------------------------------------------------------------------------------
-
-\chapterimage{Images/Back.PNG} % Chapter heading image
-\chapter{Season Starter}
-\begin{description}
-\item[Meeting Date:] Mon, 05/18/2015, 5:00 PM - 8:00 PM
-\item[Personnel Present:] Nandhana, Namitha, Maria, Shamamah, Harini\\
-
-\item[Tasks This Meeting:] \
-\begin{itemize}
-\item Recruit more members
-\item Discuss Engineering Notebook\index{Engineering Notebook}
-\item Work on funding and fundraisers\index{fundraiser}
-\item Research robot building and parts
-\item Outreach planning
-\item Discuss new Android\index{Android} platform
-\item Discuss possible sponsors\index{sponsor}
-\item Start a Kickstarter\index{Kickstarter}\\
-\end{itemize}
-
-\item[Reflections:] \
-
-At the meeting we discussed the vague plan for this year, like roles and responsibilities. Each team member will need to spend at least an hour each day and we plan to divide the team into smaller sub-teams. Everyone will get a chance to try everything but they may belong to a sub team such as 'programming'\index{programming} or 'building',\index{building} etc, based on their skills and interests. We also planned ideas for fundraisers and outreach events. We already have one sponsor, ScreenSteps and we need to reach out for more.\\
-	
-There is a lot to do but now we have a good idea where to start! Since we are a rookie team this year we started off by researching the main components of the FTC tournament. This is what we learned:\\
-
-\textit {New Android Programming and Platform}
-\begin{itemize}  
-\item Key components: robot, programming, outreach,\index{outreach} engineering log
-\item New Android platform
-\item Programming is now on Java\index{Java}
-\item One Android phone on robot, one in Driver Station \index{Driver Station}
-\item Three programming options: Android App Development with Java, MIT App Inventor,\index{MIT App Inventor} simple movement download app\\
-\end{itemize}
-
-\textit{Engineering Notebook and Outreach} 
-\begin{itemize}  
-\item Engineering log must be concise, include research and conversations
-\item Work on funding, fundraisers
-\item We need to reach out to the community for sponsors\\
-\end{itemize}
-
-\textit {Competition Stages}
-\begin{itemize}  
-\item League begins in January and is every Saturday (10 weeks), and works by achieving ratings and having eliminations until a certain amount of teams is left, which then proceed to Super League.
-\item Qualifier is single event, single elimination
-\item After League Championship\index{League Championship} and/or Qualifier\index{Qualifier} next comes Super Qualifier\index{Super Qualifier}, which leads to Regional then State, then National, and finally World\\
-\end{itemize}
-
-\includegraphics[width=.9\textwidth]{Images/Draw1.PNG}\\
-
-\includegraphics[width=.9\textwidth]{Images/Draw2.PNG}\\
-
- \item [Submitted By Nandhana]\
-\end{description}
-
-
-%----------------------------------------------------------------------------------------
 %	INDEX
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \cleardoublepage
 \phantomsection
