@@ -64,12 +64,28 @@
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
 \usepackage[utf8]{inputenc} % Required for including letters with accents
 \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY AND INDEX
 %----------------------------------------------------------------------------------------
+\usepackage[
+            hyperref=true,
+            backend=biber,
+            citestyle=authoryear,
+            natbib=true,
+            maxcitenames=3]{biblatex}
+\addbibresource{bibliography.bib}
 
-\usepackage[style=alphabetic,citestyle=numeric,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
+%\usepackage
+%[style=alphabetic,
+%citestyle=numeric,
+%sorting=nyt,
+%sortcites=true,
+%autopunct=true,
+%babel=hyphen,
+%hyperref=true,
+%abbreviate=false,
+%backref=true,
+%backend=biber]{biblatex}
 \addbibresource{bibliography.bib} % BibTeX bibliography file
 \defbibheading{bibempty}{}
 
@@ -85,6 +101,11 @@
 
 \contentsmargin{0cm} % Removes the default margin
 
+\makeatletter
+\def\namedlabel#1#2{\begingroup
+   \def\@currentlabel{#2}%
+   \label{#1}\endgroup
+}
 % Part text styling
 \titlecontents{part}[0cm]
 {\addvspace{20pt}\centering\large\bfseries}
@@ -484,7 +505,14 @@ innerbottommargin=5pt]{cBox}
 %----------------------------------------------------------------------------------------
 
 \usepackage{hyperref}
-\hypersetup{hidelinks,backref=true,pagebackref=true,hyperindex=true,colorlinks=false,breaklinks=true,urlcolor= ocre,bookmarks=true,bookmarksopen=false,pdftitle={Title},pdfauthor={Author}}
+\hypersetup{
+    colorlinks,
+    linkcolor={nriBlue},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+%\hypersetup{hidelinks,backref=true,pagebackref=true,hyperindex=true,colorlinks=false,breaklinks=true,urlcolor= ocre,bookmarks=true,bookmarksopen=false,pdftitle={Title},pdfauthor={Author}}
 \usepackage{bookmark}
 \bookmarksetup{
 open,

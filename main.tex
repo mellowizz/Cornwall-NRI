@@ -47,11 +47,14 @@
 \usepackage{wrapfig}
 \usepackage{color}
 \newcommand{\hilight}[1]{\colorbox{yellow}{#1}}
-\usepackage[chapter]{placeins}
+\usepackage[section]{placeins}
 
 \input{structure} % Insert the commands.tex file which contains the majority of 
 %the structure behind the template
 
+\definecolor{cpiOrange}{RGB}{241,85,44}
+\definecolor{nriBlue}{RGB}{102,76,153} 
+\definecolor{cpiGray}{RGB}{106,100,100}
 \begin{document}
 
 %-------------------------------------------------------------------------------
@@ -111,7 +114,7 @@
 \pagebreak
 
 %*************** Executive Summary ***************
-\input{cornwall_tex/executive}\label{sec:executivesummary}
+%\input{cornwall_tex/executive}\label{sec:executivesummary}
 
 %************** Introduction *********************
 \chapter{Introduction}\label{sec:intro}
@@ -172,7 +175,7 @@
 %Glossary%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Glossary and Acronyms}\label{subsec:glossary}
 \glsaddall
-\renewcommand{\glossarychapter}[2][]{}
+\renewcommand{\glossarysection}[2][]{}
 \printglossary
 
 %\addtocounter{subchapter}{1}
