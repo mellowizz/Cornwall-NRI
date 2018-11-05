@@ -86,7 +86,7 @@
 %abbreviate=false,
 %backref=true,
 %backend=biber]{biblatex}
-\addbibresource{bibliography.bib} % BibTeX bibliography file
+%\addbibresource{bibliography.bib} % BibTeX bibliography file
 \defbibheading{bibempty}{}
 
 \usepackage{calc} % For simpler calculation - used for spacing the index letter headings correctly
@@ -397,12 +397,12 @@ innerbottommargin=5pt]{cBox}
 % numbered part in the table of contents
 \newcommand{\@mypartnumtocformat}[2]{%
 \setlength\fboxsep{0pt}%
-\noindent\colorbox{ocre!20}{\strut\parbox[c][.7cm]{\ecart}{\color{ocre!70}\Large\sffamily\bfseries\centering#1}}\hskip\esp\colorbox{ocre!40}{\strut\parbox[c][.7cm]{\linewidth-\ecart-\esp}{\Large\sffamily\centering#2}}}%
+\noindent\colorbox{nriBlue!20}{\strut\parbox[c][.7cm]{\ecart}{\color{nriBlue!70}\Large\sffamily\bfseries\centering#1}}\hskip\esp\colorbox{nriBlue!40}{\strut\parbox[c][.7cm]{\linewidth-\ecart-\esp}{\Large\sffamily\centering#2}}}%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % unnumbered part in the table of contents
 \newcommand{\@myparttocformat}[1]{%
 \setlength\fboxsep{0pt}%
-\noindent\colorbox{ocre!40}{\strut\parbox[c][.7cm]{\linewidth}{\Large\sffamily\centering#1}}}%
+\noindent\colorbox{nriBlue!40}{\strut\parbox[c][.7cm]{\linewidth}{\Large\sffamily\centering#1}}}%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newlength\esp
 \setlength\esp{4pt}

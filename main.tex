@@ -40,7 +40,7 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+\documentclass[11pt,fleqn, openany]{book} % Default font size and left-justified equations
 %----------------------------------------------------------------------------------------
 \usepackage[english]{babel}
 \usepackage{graphicx}
@@ -48,6 +48,7 @@
 \usepackage{color}
 \newcommand{\hilight}[1]{\colorbox{yellow}{#1}}
 \usepackage[section]{placeins}
+\usepackage{multirow}
 
 \input{structure} % Insert the commands.tex file which contains the majority of 
 %the structure behind the template
@@ -57,7 +58,7 @@
 \definecolor{cpiGray}{RGB}{106,100,100}
 \loadglsentries[main]{glossary}
 \begin{document}
-
+\frontmatter
 %-------------------------------------------------------------------------------
 %	TITLE PAGE
 %-------------------------------------------------------------------------------
@@ -68,19 +69,6 @@
 %-------------------------------------------------------------------------------
 %\input{thankyou}
 
-%-------------------------------------------------------------------------------
-%	TABLE OF CONTENTS
-%-------------------------------------------------------------------------------
-
-\chapterimage{IMG_0646__1_.jpg} % Table of contents heading image
-
-\pagestyle{empty} % No headers
-
-\tableofcontents % Print the table of contents itself
-
-\cleardoublepage % Forces the first chapter to start on an odd page so it's on 
-
-\pagestyle{fancy} % Print headers again
 %-------------------------------------------------------------------------------
 %	PART
 %-------------------------------------------------------------------------------
@@ -103,9 +91,19 @@
 \chapter{Acknowledgements \& Contributors}\label{sec:acknowledgements}
 \input{cornwall_tex/acknowledgements}
 
-\pagebreak
+%-------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%-------------------------------------------------------------------------------
 
-\tableofcontents
+\chapterimage{images/stormking.jpg} % Table of contents heading image
+
+\pagestyle{empty} % No headers
+
+\tableofcontents % Print the table of contents itself
+
+\cleardoublepage % Forces the first chapter to start on an odd page so it's on 
+
+\pagestyle{fancy} % Print headers again
 
 %*************** List of Maps *******************
 \pagebreak
@@ -134,11 +132,11 @@
 \input{cornwall_tex/historic}
 
 %***************Habitats & Wildlife**************
-\chapter{Habitats and Wildlife}\label{sec:habitats}
+\part{Habitats and Wildlife}\label{sec:habitats}
 \input{cornwall_tex/habitats}
 
 %***************Water Resources******************
-\chapter{Water Resources}\label{sec:water}
+\part{Water Resources}\label{sec:water}
 \input{cornwall_tex/water}
 
 %***************Geology & Soils******************
@@ -164,11 +162,11 @@
 
 \part{References, Appendices \& Glossary}
 %**************References**********************
-\chapter{References \& Resources}\label{sec:references}
+\chapter{References \& Resources}
+\label{sec:references}
 \printbibliography
-
-%Appendix%%%%%%%%%%%%%%%%%%%%%%%%%
-\appendix
+% Appendix%%%%%%%%%%%%%%%%%%%%%%%%%
+%\appendix
 \chapter{Appendices}\label{sec:appendices}
 %\addcontentsline{toc}{chapter}{Appendices}
 %\renewcommand{\thesubchapter}{\Alph{subchapter}}
