@@ -40,7 +40,7 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[draft, 11pt,fleqn, openany]{book} % Default font size and left-justified equations
+\documentclass[11pt,fleqn, openany]{book} % Default font size and left-justified equations
 %----------------------------------------------------------------------------------------
 \usepackage[english]{babel}
 \usepackage{graphicx}
@@ -116,6 +116,7 @@
 %*************** Executive Summary ***************
 %\input{cornwall_tex/executive}\label{sec:executivesummary}
 
+\mainmatter
 %************** Introduction *********************
 \chapter{Introduction}\label{sec:intro}
 \input{cornwall_tex/intro}
@@ -160,17 +161,11 @@
 %\subchapter{Figures}
 %There will be some figures here maybe.
 
-\part{References, Appendices \& Glossary}
+%\part{References, Appendices \& Glossary}
 %**************References**********************
 \chapter{References \& Resources}
 \label{sec:references}
 \printbibliography
-% Appendix%%%%%%%%%%%%%%%%%%%%%%%%%
-%\appendix
-%\chapter{Appendices}\label{sec:appendices}
-%\addcontentsline{toc}{chapter}{Appendices}
-%\renewcommand{\thesubchapter}{\Alph{subchapter}}
-
 
 %Glossary%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Glossary and Acronyms}\label{subsec:glossary}
@@ -179,10 +174,9 @@
 \printglossary
 
 %\addtocounter{subchapter}{1}
-\chapter{Known Species of Conservation Concern in the Town of Cornwall 
-and Village of Cornwall-on-Hudson, NY}
+\chapter{Known Species of Conservation Concern}
 \includepdf[pages=-]{appendix/cornwall_B.pdf}
-\namedlabel{app:cornwall_species}{Known Species of Conservation Concern in the 
+\namedlabel{app:cornwallspecies}{Known Species of Conservation Concern in the 
 Town of Cornwall and Village of Cornwall-on-Hudson, NY}
 
 %\addtocounter{subchapter}{1}
@@ -234,7 +228,7 @@ Center}
 \cleardoublepage
 \phantomsection
 \setlength{\columnsep}{0.75cm}
-\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
+\addcontentsline{toc}{chapter}{\textcolor{nriBlue}{Index}}
 \printindex
 
 %----------------------------------------------------------------------------------------
