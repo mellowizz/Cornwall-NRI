@@ -168,6 +168,7 @@
 \printbibliography
 
 %Glossary%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{appendices}
 \chapter{Glossary and Acronyms}\label{subsec:glossary}
 \glsaddall
 \renewcommand{\glossarysection}[2][]{}
@@ -192,7 +193,8 @@ Town of Cornwall and Village of Cornwall-on-Hudson, NY}
 
 \chapter{Natural Resources within Zoning Districts and Overlays}
 %for the Town of Cornwall and the Village of Cornwall-on-Hudson}
-\input{appendix/cornwall_F}\label{app:zoning}
+\input{appendix/cornwall_F}\namedlabel{app:zoning}{Natural Resources within Zoning Districts and Overlays 
+for the Town of Cornwall and the Village of Cornwall-on-Hudson.}
 
 %\addtocounter{subchapter}{1}
 %\addcontentsline{toc}{subchapter}{\Alph{subchapter} \hspace{4mm}
@@ -217,7 +219,7 @@ Town of Cornwall and Village of Cornwall-on-Hudson, NY}
 \chapter{Compact Development \& Infill}
 %from Pace Law School Land Use Law Center} 
 \includepdf[pages=-]{appendix/cornwall_J.pdf}\label{app:compact_development}
-
+\end{appendices}
 %\noindent Some text here that is not indented...
 
 %-------------------------------------------------------------------------------
